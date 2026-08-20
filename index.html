@@ -11,6 +11,8 @@
   <meta property="og:title" content="龍和（RYUNA）｜原田和弥（HATATA KAZUYA）">
   <meta property="og:description" content="技術と創作を通じて、暮らしと未来を設計する。">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ryuna888.github.io/">
+  <link rel="canonical" href="https://ryuna888.github.io/">
   <title>龍和（RYUNA）｜原田和弥（HATATA KAZUYA）公式プロフィール</title>
 
   <style>
@@ -268,17 +270,56 @@
   </style>
 
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"ProfilePage",
-    "mainEntity":{
-      "@type":"Person",
-      "name":"原田和弥",
-      "alternateName":"龍和",
-      "description":"技術・創作・暮らしを横断し、自分らしい未来を設計する。",
-      "identifier":["RYUNA","HATATA KAZUYA"]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://ryuna888.github.io/#website",
+      "url": "https://ryuna888.github.io/",
+      "name": "龍和（RYUNA）｜原田和弥（HATATA KAZUYA）",
+      "alternateName": [
+        "龍和",
+        "RYUNA",
+        "原田和弥",
+        "HATATA KAZUYA"
+      ],
+      "inLanguage": "ja",
+      "publisher": {
+        "@id": "https://ryuna888.github.io/#person"
+      }
+    },
+    {
+      "@type": "ProfilePage",
+      "@id": "https://ryuna888.github.io/#profile",
+      "url": "https://ryuna888.github.io/",
+      "name": "龍和（RYUNA）｜原田和弥（HATATA KAZUYA）公式プロフィール",
+      "isPartOf": {
+        "@id": "https://ryuna888.github.io/#website"
+      },
+      "mainEntity": {
+        "@id": "https://ryuna888.github.io/#person"
+      },
+      "inLanguage": "ja"
+    },
+    {
+      "@type": "Person",
+      "@id": "https://ryuna888.github.io/#person",
+      "name": "原田和弥",
+      "alternateName": [
+        "龍和",
+        "RYUNA",
+        "HATATA KAZUYA"
+      ],
+      "url": "https://ryuna888.github.io/",
+      "description": "技術・創作・暮らしを横断し、自分らしい未来を設計する。AI、アプリ開発、MasterLedger、創作作品『陽炎の馬』などの活動を紹介。",
+      "sameAs": [
+        "https://ryuna888.github.io/MasterLedger/",
+        "https://meishinren.or.jp/modules/gallery/index.php?action=PageView&page_id=218"
+      ]
     }
-  }
+  ]
+}
   </script>
 </head>
 
