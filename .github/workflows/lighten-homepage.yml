@@ -1,0 +1,33 @@
+name: Lighten homepage
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/lighten-homepage.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  lighten:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Extract embedded images and update homepage links
+        run: python scripts/lighten-homepage.py
+
+      - name: Commit homepage lightening
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html assets
+          git add -u assets
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Lighten homepage assets and update links"
+          git push
