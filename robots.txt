@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://ryuna888.github.io/sitemap.xml
-Sitemap: https://ryuna888.github.io/sitemap.txt
